@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "overtrue/wechat": "^5.0",
+        "w7corp/easywechat": "^5.0",
         "topthink/framework": "^6.0",
         "psr/simple-cache": "^1.0"
     },
