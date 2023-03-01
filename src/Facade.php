@@ -45,9 +45,7 @@ class Facade extends ThinkFacade
      */
     public static function work($name = '',$config = [])
     {
-        $app = $name ? app('wechat.work.' . $name,  ["config"=>$config]) : app('wechat.work',  ["config"=>$config]);
-        injectThinkLoggerToWechatApp($app);
-        return $app;
+        return $name ? app('wechat.work.' . $name,  ["config"=>$config]) : app('wechat.work',  ["config"=>$config]);
     }
 
     /**
@@ -55,9 +53,7 @@ class Facade extends ThinkFacade
      */
     public static function payment($name = '',$config = [])
     {
-        $app = $name ? app('wechat.payment.' . $name,  ["config"=>$config]) : app('wechat.payment',  ["config"=>$config]);
-        injectThinkLoggerToWechatApp($app);
-        return $app;
+        return $name ? app('wechat.payment.' . $name,  ["config"=>$config]) : app('wechat.payment',  ["config"=>$config]);
     }
 
     /**
@@ -65,9 +61,7 @@ class Facade extends ThinkFacade
      */
     public static function miniProgram($name = '',$config = [])
     {
-        $app = $name ? app('wechat.mini_program.' . $name,  ["config"=>$config]) : app('wechat.mini_program',  ["config"=>$config]);
-        injectThinkLoggerToWechatApp($app);
-        return $app;
+        return $name ? app('wechat.mini_program.' . $name,  ["config"=>$config]) : app('wechat.mini_program',  ["config"=>$config]);
     }
 
     /**
@@ -75,9 +69,7 @@ class Facade extends ThinkFacade
      */
     public static function openPlatform($name = '',$config = [])
     {
-        $app = $name ? app('wechat.open_platform.' . $name,  ["config"=>$config]) : app('wechat.open_platform',  ["config"=>$config]);
-        injectThinkLoggerToWechatApp($app);
-        return $app;
+        return $name ? app('wechat.open_platform.' . $name,  ["config"=>$config]) : app('wechat.open_platform',  ["config"=>$config]);
     }
 
 
@@ -86,9 +78,7 @@ class Facade extends ThinkFacade
      */
     public static function openWork($name = '',$config = [])
     {
-        $app = $name ? app('wechat.open_work.' . $name,  ["config"=>$config]) : app('wechat.open_work',  ["config"=>$config]);
-        injectThinkLoggerToWechatApp($app);
-        return $app;
+        return $name ? app('wechat.open_work.' . $name,  ["config"=>$config]) : app('wechat.open_work',  ["config"=>$config]);
     }
 
     /**
@@ -96,9 +86,7 @@ class Facade extends ThinkFacade
      */
     public static function microMerchant($name = '',$config = [])
     {
-        $app = $name ? app('wechat.micro_merchant.' . $name,  ["config"=>$config]) : app('wechat.micro_merchant',  ["config"=>$config]);
-        injectThinkLoggerToWechatApp($app);
-        return $app;
+        return $name ? app('wechat.micro_merchant.' . $name,  ["config"=>$config]) : app('wechat.micro_merchant',  ["config"=>$config]);
     }
 
 }
