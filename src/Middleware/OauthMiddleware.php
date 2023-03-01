@@ -11,17 +11,16 @@
 
 namespace trenton93\wechat\Middleware;
 
-use EasyWeChat\OfficialAccount\Application;
-use think\facade\Log;
 use think\Request;
+use think\facade\Log;
 use think\facade\Session;
+use EasyWeChat\OfficialAccount\Application;
 
 class OauthMiddleware
 {
 
     /**
      * 执行中间件
-     *
      * @param Request  $request
      * @param \Closure $next
      * @param null     $param
@@ -41,7 +40,7 @@ class OauthMiddleware
         if (!$scopes) {
             $scopes = config(sprintf('wechat.official_account.%s.oauth.scopes', $account));
         }
-        if (!$scopes){
+        if (!$scopes) {
             $scopes = ['snsapi_base'];
         }
         if (is_string($scopes)) {
@@ -100,7 +99,6 @@ class OauthMiddleware
 
     /**
      * Build the target business url.
-     *
      * @param Request $request
      *¬
      * @return string

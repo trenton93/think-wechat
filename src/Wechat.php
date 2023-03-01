@@ -20,7 +20,6 @@ use EasyWeChat\MiniProgram\Application as MiniProgram;
 use EasyWeChat\OpenPlatform\Application as OpenPlatform;
 use EasyWeChat\MicroMerchant\Application as MicroMerchant;
 use EasyWeChat\OfficialAccount\Application as OfficialAccount;
-use trenton93\wechat\Cache;
 
 class Service extends ThinkService
 {

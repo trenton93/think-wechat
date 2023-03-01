@@ -22,11 +22,6 @@ class Cache implements CacheInterface
         $this->cache = app('cache');
     }
 
-    public function get($key, $default = null)
-    {
-        return $this->cache->get($key, $default);
-    }
-
     public function set($key, $value, $ttl = null)
     {
         return $this->cache->set($key, $value, $ttl);
@@ -42,21 +37,20 @@ class Cache implements CacheInterface
         return $this->cache->clear();
     }
 
-    public function getMultiple($keys, $default = null)
-    {
-    }
+    public function getMultiple($keys, $default = null) {}
 
-    public function setMultiple($values, $ttl = null)
-    {
-    }
+    public function setMultiple($values, $ttl = null) {}
 
-    public function deleteMultiple($keys)
-    {
-    }
+    public function deleteMultiple($keys) {}
 
     public function has($key)
     {
         return !is_null($this->cache->get($key));
+    }
+
+    public function get($key, $default = null)
+    {
+        return $this->cache->get($key, $default);
     }
 
 }
