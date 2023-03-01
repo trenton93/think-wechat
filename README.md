@@ -1,6 +1,6 @@
 # think-wechat
 
-微信SDK For  ThinkPHP 6.0 基于[overtrue/wechat](https://github.com/overtrue/wechat)
+微信SDK For  ThinkPHP 6.0 基于[w7corp/easywechat](https://github.com/w7corp/easywechat)
 
 ## 框架要求
 
@@ -11,6 +11,10 @@ ThinkPHP >= 6.0
 ```bash
 composer require trenton93/think-wechat
 ```
+```bash
+php think wechat:config
+```
+
 
 ## 配置
 

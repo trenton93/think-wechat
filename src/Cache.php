@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkWechat 缓存类
+// | 缓存类
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -9,11 +9,11 @@
 // | Author: Trenton <370887237@qq.com>
 // +----------------------------------------------------------------------
 
-namespace trenton93\ThinkWechat;
+namespace trenton93\wechat;
 
 use Psr\SimpleCache\CacheInterface;
 
-class CacheBridge implements CacheInterface
+class Cache implements CacheInterface
 {
     protected $cache = null;
 

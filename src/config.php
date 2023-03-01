@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkWechat 配置文件
+// | 配置文件
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -13,7 +13,7 @@ return [
     /*
       * 默认配置，将会合并到各模块中
       */
-    'default'         => [
+    'default'          => [
         /*
          * 指定 API 调用返回结果的类型：array(default)/object/raw/自定义类名
          */
@@ -32,7 +32,7 @@ return [
         'log'           => [
             'default'  => 'default',
             'channels' => [
-                'default'  => [
+                'default' => [
                     'driver' => 'daily',
                     'level'  => 'debug',
                     'path'   => app()->getRuntimePath() . "log/wechat.log",
@@ -45,13 +45,13 @@ return [
     'official_account' => [
         'default' => [
             // AppID
-            'app_id' => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'your-app-id'),
+            'app_id'  => '',
             // AppSecret
-            'secret' => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', 'your-app-secret'),
+            'secret'  => '',
             // Token
-            'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),
+            'token'   => '',
             // EncodingAESKey
-            'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),
+            'aes_key' => '',
             /*
              * OAuth 配置
              *

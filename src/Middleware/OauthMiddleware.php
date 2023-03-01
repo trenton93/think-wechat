@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkWechat 授权中间件
+// | 授权中间件
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -9,7 +9,7 @@
 // | Author: Trenton <370887237@qq.com>
 // +----------------------------------------------------------------------
 
-namespace trenton93\ThinkWechat\Middleware;
+namespace trenton93\wechat\Middleware;
 
 use EasyWeChat\OfficialAccount\Application;
 use think\facade\Log;

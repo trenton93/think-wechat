@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkWechat 服务类
+// | 服务类
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -10,19 +10,19 @@
 // +----------------------------------------------------------------------
 // +----------------------------------------------------------------------
 
-namespace trenton93\ThinkWechat;
+namespace trenton93\wechat;
 
-use EasyWeChat\MicroMerchant\Application as MicroMerchant;
-use EasyWeChat\MiniProgram\Application as MiniProgram;
-use EasyWeChat\OfficialAccount\Application as OfficialAccount;
-use EasyWeChat\OpenPlatform\Application as OpenPlatform;
-use EasyWeChat\OpenWork\Application as OpenWork;
-use EasyWeChat\Payment\Application as Payment;
+use think\Service as ThinkService;
 use EasyWeChat\Work\Application as Work;
-use trenton93\ThinkWechat\CacheBridge;
-use think\Service;
+use EasyWeChat\Payment\Application as Payment;
+use EasyWeChat\OpenWork\Application as OpenWork;
+use EasyWeChat\MiniProgram\Application as MiniProgram;
+use EasyWeChat\OpenPlatform\Application as OpenPlatform;
+use EasyWeChat\MicroMerchant\Application as MicroMerchant;
+use EasyWeChat\OfficialAccount\Application as OfficialAccount;
+use trenton93\wechat\Cache;
 
-class WechatService extends Service
+class Service extends ThinkService
 {
 
     /*
@@ -33,7 +33,7 @@ class WechatService extends Service
      */
     public function boot()
     {
-        $apps = [
+        $apps           = [
             'official_account' => OfficialAccount::class,
             'work'             => Work::class,
             'mini_program'     => MiniProgram::class,
@@ -54,7 +54,7 @@ class WechatService extends Service
                     $account_config = array_merge($module_default, $wechat_default, $config);
                     $account_app    = app($app, ['config' => $account_config]);
                     if (config('wechat.default.use_tp_cache')) {
-                        $account_app['cache'] = app(CacheBridge::class);
+                        $account_app['cache'] = app(Cache::class);
                     }
                     return $account_app;
                 });

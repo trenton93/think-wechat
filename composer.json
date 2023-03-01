@@ -16,7 +16,7 @@
     }],
     "autoload": {
         "psr-4": {
-            "trenton93\\ThinkWechat\\": "src/"
+            "trenton93\\wechat\\": "src/"
         },
         "files": [
             "src/helper.php"
@@ -25,7 +25,7 @@
     "extra": {
         "think": {
             "services": [
-                "trenton93\\ThinkWechat\\WechatService"
+                "trenton93\\wechat\\Service"
             ],
             "config":{
                 "wechat": "src/config.php"
