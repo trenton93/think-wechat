@@ -38,11 +38,10 @@ class Config extends Command
     public function execute(Input $input, Output $output)
     {
         //获取默认配置文件
-        $content = file_get_contents(Env::get('root_path') . 'vendor/trenton93/think-wechat/src/config.php');
+        $content = file_get_contents(root_path('vendor/trenton93/think-wechat/src') . 'config.php');
 
-        $configPath = Env::get('config_path') . '/';
+        $configPath = config_path();
         $configFile = $configPath . 'wechat.php';
-
 
         //判断目录是否存在
         if (!file_exists($configPath)) {
