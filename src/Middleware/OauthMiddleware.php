@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | 授权中间件
+// | think-wechat [微信 SDK for thinkphp6, 基于 w7corp/easywechat]
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -9,13 +9,18 @@
 // | Author: Trenton <370887237@qq.com>
 // +----------------------------------------------------------------------
 
-namespace trenton93\wechat\Middleware;
+namespace trenton93\wechat\middleware;
 
 use think\Request;
 use think\facade\Log;
 use think\facade\Session;
 use EasyWeChat\OfficialAccount\Application;
 
+/**
+ * 授权中间件
+ * Class OauthMiddleware
+ * @package trenton93\wechat\middleware
+ */
 class OauthMiddleware
 {
 

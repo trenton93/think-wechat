@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | 缓存类
+// | think-wechat [微信 SDK for thinkphp6, 基于 w7corp/easywechat]
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -13,6 +13,11 @@ namespace trenton93\wechat;
 
 use Psr\SimpleCache\CacheInterface;
 
+/**
+ * 缓存类
+ * Class Cache
+ * @package trenton93\wechat
+ */
 class Cache implements CacheInterface
 {
     protected $cache = null;

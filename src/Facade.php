@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | 门面类
+// | think-wechat [微信 SDK for thinkphp6, 基于 w7corp/easywechat]
 // +----------------------------------------------------------------------
 // | Copyright (c) 2023 https://leapfu.com All rights reserved.
 // +----------------------------------------------------------------------
@@ -11,13 +11,12 @@
 
 namespace trenton93\wechat;
 
-use think\Facade as ThinkFacade;
-
 /**
- * Class Facade.
- * @author overtrue <i@overtrue.me>
+ * 门面类
+ * Class Facade
+ * @package trenton93\wechat
  */
-class Facade extends ThinkFacade
+class Facade extends \think\Facade
 {
 
     /**

@@ -31,10 +31,5 @@
                 "wechat": "src/config.php"
             }
         }
-    },
-    "config": {
-        "allow-plugins": {
-            "easywechat-composer/easywechat-composer": false
-        }
     }
 }
