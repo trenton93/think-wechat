@@ -46,7 +46,7 @@ class Service extends \think\Service
     public function boot()
     {
         $defaultConfig = config('wechat.default') ? config('wechat.default') : [];
-        foreach ($apps as $name => $app) {
+        foreach ($this->apps as $name => $app) {
             if (!config('wechat.' . $name)) {
                 continue;
             }
