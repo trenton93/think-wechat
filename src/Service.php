@@ -61,6 +61,9 @@ class Service extends \think\Service
                     return $accountApp;
                 });
             }
+            if (isset($configs['default'])) {
+                $this->app->bind('wechat.' . $name, 'wechat.' . $name . '.default');
+            }
         }
         $this->commands([
             \trenton93\wechat\command\Config::class
